@@ -1,0 +1,91 @@
+.field {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  height: 56px;
+  margin: 16px 0;
+  position: relative;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
+  width: 100%;
+}
+
+.field:hover {
+  // background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.field.active {
+  // background-color: #ffffff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.field.active input {
+  // padding: 24px 16px 8px 16px;
+  color: var(--white);
+}
+// hide input placeholder
+.field.active input::placeholder {
+  color: transparent;
+}
+
+.field.active input + label {
+  color: var(--gray-light);
+  opacity: 0.7;
+  top: -1px;
+}
+
+.field.locked {
+  pointer-events: none;
+}
+
+.field input {
+  appearance: none;
+  background-color: transparent;
+  border: none !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 transparent;
+  color: var(--gray-light);
+  font-size: 16px;
+  font-weight: 400;
+  height: 56px;
+  line-height: normal;
+  margin: 0;
+  outline: none;
+  padding: 0 16px;
+  position: relative;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
+    0.1s padding ease-in-out;
+  width: 100%;
+}
+
+.field input::input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field input:input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field input:placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field input + label {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  left: 16px;
+  line-height: 24px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 54px;
+  transition: 0.1s all ease-in-out;
+}
+
+.field input + label.error {
+  color: var(--red);
+}
